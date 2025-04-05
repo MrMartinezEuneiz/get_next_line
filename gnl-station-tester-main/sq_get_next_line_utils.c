@@ -42,8 +42,6 @@ char	*gnl_strjoin(char *s1, char *s2)
 	size_t	i;
 	size_t	j;
 
-	len = 0;
-	*res = 0;
 	i = 0;
 	j = 0;
 	*res = malloc(len + 1);
