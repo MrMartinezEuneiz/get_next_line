@@ -86,3 +86,44 @@ char	*get_next_line(int fd)
 
 // cc -Wall -Werror -Wextra -D BUFFER_SIZE=42
 //get_next_line.c get_next_line_utils.c main.c -o test
+
+/* #include <stdio.h>
+#include <fcntl.h>
+#include "get_next_line.h"
+int main()
+{
+	int fd = open("a.txt", O_RDONLY);
+	char *a;
+	a = get_next_line(fd);
+	while (a != NULL)
+	{
+		printf("%s", a);
+		free(a);
+		a = get_next_line(fd);
+	}
+
+	printf("%s", a);
+	free(a);
+
+	return 0;
+} 
+#include <fcntl.h>
+#include "get_next_line.h"
+int main()
+{
+	int fd = open("a.txt", O_RDONLY);
+	char *a;
+	fd =1
+	a = get_next_line(fd);
+	while (a != NULL)
+	{
+		printf("%s", a);
+		free(a);
+		a = get_next_line(fd);
+	}
+
+	printf("%s", a);
+	free(a);
+
+	return 0;	
+*/
