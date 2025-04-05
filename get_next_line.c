@@ -1,9 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mikemart <mikemart@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/05 17:58:45 by mikemart          #+#    #+#             */
+/*   Updated: 2025/04/05 17:58:45 by mikemart         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "get_next_line.h"
 
 static char	*extract_line(char *stash)
 {
-	size_t	i = 0;
+	size_t	i;
 
+	i = 0;
 	if (!stash || !stash[0])
 		return (NULL);
 	while (stash[i] && stash[i] != '\n')
@@ -15,9 +28,10 @@ static char	*extract_line(char *stash)
 
 static char	*clean_stash(char *stash)
 {
-	size_t	i = 0;
+	size_t	i;
 	char	*new_stash;
 
+	i = 0;
 	while (stash[i] && stash[i] != '\n')
 		i++;
 	if (!stash[i])
@@ -70,4 +84,5 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-// cc -Wall -Werror -Wextra -D BUFFER_SIZE=42 get_next_line.c get_next_line_utils.c main.c -o test
+// cc -Wall -Werror -Wextra -D BUFFER_SIZE=42
+//get_next_line.c get_next_line_utils.c main.c -o test
