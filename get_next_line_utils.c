@@ -42,25 +42,26 @@ char	*gnl_strjoin(char *s1, char *s2)
 	size_t	i;
 	size_t	j;
 
-	len = 0;
-	*res = 0;
-	i = 0;
-	j = 0;
 	len = gnl_strlen(s1) + gnl_strlen(s2);
-	*res = malloc(len + 1);
+	res = malloc(len + 1);
 	if (!res)
 		return (NULL);
+	i = 0;
+	j = 0;
 	while (s1 && s1[i])
 	{
 		res[i] = s1[i];
 		i++;
 	}
 	while (s2 && s2[j])
+	{
 		res[i++] = s2[j++];
+	}
 	res[i] = '\0';
 	free(s1);
 	return (res);
 }
+
 
 char	*gnl_substr(char *s, unsigned int start, size_t len)
 {
