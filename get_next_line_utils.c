@@ -46,8 +46,8 @@ char	*gnl_strjoin(char *s1, char *s2)
 	*res = 0;
 	i = 0;
 	j = 0;
-	*res = malloc(len + 1);
 	len = gnl_strlen(s1) + gnl_strlen(s2);
+	*res = malloc(len + 1);
 	if (!res)
 		return (NULL);
 	while (s1 && s1[i])
