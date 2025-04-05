@@ -62,7 +62,6 @@ char	*gnl_strjoin(char *s1, char *s2)
 	return (res);
 }
 
-
 char	*gnl_substr(char *s, unsigned int start, size_t len)
 {
 	char	*sub;
